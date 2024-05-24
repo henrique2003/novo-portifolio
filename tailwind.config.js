@@ -8,7 +8,9 @@ export default {
     extend: {
       colors: {
         darker: "#070707",
-        ligther: "#FFFFFF"
+        ligther: "#FFFFFF",
+        "ocean-blue": "#00D1F7",
+        grayrer: "#A2A2A2"
       }
     },
   },

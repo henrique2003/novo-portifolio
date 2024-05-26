@@ -1,14 +1,10 @@
-import { LegacyRef, useEffect, useRef } from "react"
+import { useEffect, useRef } from "react"
 import { meImg } from "../../assets"
 import gsap from "gsap"
 import { ArrowDown } from "lucide-react"
 import { Square } from "../atoms/square"
 
-type IntroductionProps = {
-  containerRef: LegacyRef<HTMLDivElement> | undefined
-}
-
-export const Introduction: React.FC<IntroductionProps> = ({ containerRef }) => {
+export const Introduction: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLHeadingElement>(null)
   const pointRef = useRef<HTMLDivElement>(null)
@@ -79,7 +75,7 @@ export const Introduction: React.FC<IntroductionProps> = ({ containerRef }) => {
   }, [])
 
   return (
-    <div className="w-full flex flex-col justify-center items-center mt-[100px]" ref={containerRef}>
+    <div className="w-full flex flex-col justify-center items-center mt-[100px]">
       <img
         src={meImg}
         alt="Imagem de Henrique De Melo Cristioglu"
@@ -94,7 +90,7 @@ export const Introduction: React.FC<IntroductionProps> = ({ containerRef }) => {
       </h1>
       <p className="font-semibold uppercase text-center mt-4 text-grayrer text-md opacity-0" ref={subtitleRef}><i>Desenvoldedor fullstack</i></p>
       <div className="w-full relative flex justify-center items-center">
-        <div className="w-[3px] rounded-lg bg-grayrer h-[100px] mt-20 opacity-0" ref={traceDetailRef}></div>
+        <div id="introduction-trace" className="w-[3px] rounded-lg bg-grayrer h-[100px] mt-20 opacity-0" ref={traceDetailRef}></div>
         <Square ref={squareRef1} className="top-0" />
         <Square ref={squareRef2} className="top-20" />
         <Square ref={squareRef3} className="top-20 right-7" />

@@ -13,17 +13,19 @@ export const SkillExamples: React.FC = () => {
     const slideWrap = slideWrapRef.current
     const container = containerRef.current
 
+    if (window.screen.width < 900) return
+
     gsap.set(container, { width: container.scrollWidth })
 
     const horizontalScroll = gsap.to(container, {
-      x: () => -(container.scrollWidth - window.innerWidth) + "px",
+      x: () => -((container.scrollWidth - window.innerWidth)) + "px",
       ease: "none",
       scrollTrigger: {
         trigger: slideWrap,
         pin: true,
         scrub: 0.5,
         start: "top top",
-        end: () => "+=" + container.scrollWidth,
+        end: () => "+=" + container.scrollWidth / 2,
         invalidateOnRefresh: true,
         anticipatePin: 1
       }
@@ -36,8 +38,8 @@ export const SkillExamples: React.FC = () => {
   }, [])
 
   return (
-    <div className="w-full overflow-hidden" ref={slideWrapRef}>
-      <div className="flex h-[100vh] gap-20 items-center" ref={containerRef}>
+    <div className="w-full overflow-hidden max-lg:overflow-visible" ref={slideWrapRef}>
+      <div className="flex h-[100vh] gap-20 items-center max-lg:flex-col max-lg:h-auto max-lg:mt-20" ref={containerRef}>
         <SkillExampleWeb />
         <SkillExampleMobile />
       </div>

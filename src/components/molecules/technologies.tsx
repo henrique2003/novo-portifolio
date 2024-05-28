@@ -12,6 +12,8 @@ export const Technologies: React.FC = () => {
   const technologieItem4Ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (window.screen.width < 900) return
+
     const container = containerRef.current
 
     const tl = gsap.timeline({
@@ -54,11 +56,11 @@ export const Technologies: React.FC = () => {
   }, [])
 
   return (
-    <div className="w-full flex justify-center items-center h-screen overflow-hidden" ref={containerRef}>
+    <div className="w-full flex justify-center items-center h-screen overflow-hidden max-md:mt-20" ref={containerRef}>
       <div className="bg-[#171717] w-full rounded-lg py-14 px-8 flex justify-center items-center flex-col">
-        <h3 className="uppercase text-white font-semibold text-5xl text-center">Tecnologioas que Utilizo</h3>
-        <p className="mt-5 text-white opacity-70 text-center text-xl font-light">Conheca as linguagens mais utilizadas na atualidade</p>
-        <div className="mt-10 grid grid-cols-4 gap-5 w-full">
+        <h3 className="uppercase text-white font-semibold text-5xl text-center max-md:text-4xl">Tecnologioas que Utilizo</h3>
+        <p className="mt-5 text-white opacity-70 text-center text-xl font-light max-md:text-lg">Conheca as linguagens mais utilizadas na atualidade</p>
+        <div className="mt-10 grid grid-cols-4 gap-5 w-full max-lg:grid-cols-2 max-sm:grid-cols-1">
           <TechnologieItem
             icon={<FaReact size={38} color="#336AE9" />}
             borderColor="border-[#336AE9]"

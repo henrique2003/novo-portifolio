@@ -9,11 +9,11 @@ export const SkillExampleWeb: React.FC = () => {
         title="Imagem do sistema CineLumni, um sistema de gestão para cinema"
         className="max-lg:text-center max-lg:mx-auto w-full"
       />
-      <div className="flex w-full flex-col items-start justify-center gap-5 min-w-[500px] max-lg:min-w-[0px] max-lg:w-[100%]">
-        <h4 className="text-xl text-white font-semibold text-left tracking-wide w-full">
+      <div className="flex w-full flex-col items-start justify-center gap-5 max-md:gap-3 min-w-[500px] max-lg:min-w-[0px] max-lg:w-[100%]">
+        <h4 className="text-2xl max-sm:text-lg max-md:text-xl text-white font-semibold text-left tracking-wide w-full">
           Desenvolvimento de Softwares e websites
         </h4>
-        <p className="text-grayrer leading-7 tracking-wide text-md max-w-[600px] w-full">
+        <p className="text-grayrer leading-7 tracking-wide text-xl max-md:text-md max-sm:text-sm max-w-[600px] w-full">
           É um fato conhecido de todos que um leitor se distrairá com o
           conteúdo de texto legível de uma página quando estiver examinando
           sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma

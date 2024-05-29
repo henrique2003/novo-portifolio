@@ -20,8 +20,8 @@ export const TechnologieItem: React.FC<ITechnologieItemProps> = forwardRef(({ ic
         {icon}
       </div>
       <div className="flex-1 overflow-hidden">
-        <p className="text-md font-medium text-white tracking-wider translate-y-[10px]" id={`technologie-item-title-${id}`}>{text}</p>
-        <p className="text-sm font-light text-white tracking-wider opacity-70 translate-y-[20px]" id={`technologie-item-description-${id}`}>{description}</p>
+        <p className="text-xl max-md:text-lg font-medium text-white tracking-wider translate-y-[10px] max-md:translate-y-0" id={`technologie-item-title-${id}`}>{text}</p>
+        <p className="text-md max-sm:text-sm font-light text-white tracking-wider opacity-70 translate-y-[20px] max-md:translate-y-0" id={`technologie-item-description-${id}`}>{description}</p>
       </div>
     </div>
   )

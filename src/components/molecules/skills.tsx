@@ -13,22 +13,12 @@ export const Skills: React.FC = () => {
       scrollTrigger: {
         trigger: "#introduction-trace",
         start: "top top",
-        end: "=+200px",
+        end: "=+400px",
         scrub: true
       }
     })
 
     tl
-      .to(titleRef.current, {
-        duration: 2,
-        opacity: 1,
-        ease: "power1"
-      })
-      .to(subTitleRef.current, {
-        duration: 2,
-        opacity: 1,
-        ease: "power1"
-      }, '<')
       .to(triangleLeftRef.current, {
         duration: 2,
         opacity: 1,
@@ -44,9 +34,9 @@ export const Skills: React.FC = () => {
   }, [])
 
   return (
-    <div className="w-full mt-28 flex flex-col justify-center items-center gap-5 min-h-[350px] relative">
-      <h2 className="text-5xl font-semibold uppercase text-center text-white tracking-wider opacity-0" ref={titleRef}>Habilidades</h2>
-      <p className="font-medium text-center mt-4 text-grayrer text-md opacity-0" ref={subTitleRef}>Veja como posso te ajudar</p>
+    <div className="w-full mt-28 max-md:mt-10 flex flex-col justify-center items-center gap-5 min-h-[350px] relative">
+      <h2 className="text-5xl font-semibold uppercase text-center text-white tracking-wider" ref={titleRef}>Habilidades</h2>
+      <p className="font-medium text-center mt-4 text-grayrer text-md" ref={subTitleRef}>Veja como posso te ajudar</p>
       <TriangleRight className="border-l-orange-400 absolute bottom-[20px] opacity-0 left-[-100px]" ref={triangleLeftRef} />
       <TriangleLeft className="border-r-ocean-blue absolute bottom-[20px] opacity-0 right-[-100px]" ref={triangleRightRef} />
     </div>

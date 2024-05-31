@@ -25,7 +25,7 @@ export const SkillExamples: React.FC = () => {
         pin: true,
         scrub: 0.5,
         start: "top top",
-        end: () => "+=" + container.scrollWidth / 2,
+        end: () => "+=" + container.scrollWidth,
         invalidateOnRefresh: true,
         anticipatePin: 1
       }
